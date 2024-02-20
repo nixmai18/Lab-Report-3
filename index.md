@@ -90,7 +90,7 @@ static void reverseInPlace(int[] arr) {
 }
 ```
 Explanation:
-The fix addresses the issue because the value is updated without storing the previous value. Before the temp variable is added and the loop is loop only for half of the array, the arr[i] = arr[arr.length - i - 1]; directly override the value that we need to save it and interchange it. By loop through only half of the array and switch the elements between each other with the value stored in the temp first address the problem that the method change the array value with the wrong way.
+The fix addresses the issue because the value is updated without storing the previous value. Before the temp variable is added and the loop is loop only for half of the array, the ```arr[i] = arr[arr.length - i - 1];``` directly override the value that we need to save it and interchange it. By loop through only half of the array and switch the elements between each other with the value stored in the temp first address the problem that the method change the array value with the wrong way.
 
 
 ## Part 2: Researching Commands
@@ -119,7 +119,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./plos -name "pmed.001001*"
 ./plos/pmed.0010010-logical.xml
 ```
 
-The find -name command is returning every path for files that starts with "pmed.001001". This is very useful
+The ```find -name``` command is returning every path for files that starts with "pmed.001001". This is very useful
 if you are trying to find the path of the file where you only know the part of the name.
 
 2. Second Example
@@ -134,7 +134,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % Find ./government/Env_Prot_Agen -n
 ./government/Env_Prot_Agen/final-s.xml
 ./government/Env_Prot_Agen/final.anc
 ```
-The find -name command is returning every path for files that contain the string "final" within the file name. Can be used when you know the path of a file
+The ```find -name``` command is returning every path for files that contain the string "final" within the file name. Can be used when you know the path of a file
 but not the complete file name.
 
 ## ```find -type```
@@ -151,7 +151,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./government -type d
 ./government/Post_Rate_Comm
 ./government/Media
 ```
-The find -type command is returning the paths for all directories within the path. This is useful if you want the directories paths within a directory rather than the files itself.
+The ```find -type``` command is returning the paths for all directories within the path. This is useful if you want the directories paths within a directory rather than the files itself.
 
 2. Second Example
 
@@ -355,7 +355,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./government -size +500k
 ./government/Media/predatory_loans-hepple.xml
 ```
 
-The find -size command is returning the paths for any files in the given directory that have a size more than 500 kilobytes. 
+The ```find -size``` command is returning the paths for any files in the given directory that have a size more than 500 kilobytes. 
 Can help sort large files.
 
 2. Second Example
@@ -382,7 +382,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./biomed -size +10k -size -11
 ./biomed/1471-230X-2-17.txt
 ./biomed/1471-2350-2-8.txt
 ```
-The finx -size command is returning the paths for any files in a given directory who's size is more than 10 bilobytes but less than 11 kilobytes. Can find files
+The ```find -size``` command is returning the paths for any files in a given directory who's size is more than 10 bilobytes but less than 11 kilobytes. Can find files
 with certain size ranges.
 
 ### ```find - delete```
@@ -393,7 +393,7 @@ with certain size ranges.
 nimaikasibatla@Nimais-MacBook-Air technical % find ./biomed  -name "1471*" -delete 
 nimaikasibatla@Nimais-MacBook-Air technical %
 ```
-The find -delete command removed every file in the given directory starting with 1471. Can be useful for deleting files you know the directory and name of. 
+The ```find -delete``` command removed every file in the given directory starting with 1471. Can be useful for deleting files you know the directory and name of. 
 
 2. Second Example
 
@@ -401,6 +401,6 @@ The find -delete command removed every file in the given directory starting with
 nimaikasibatla@Nimais-MacBook-Air technical % find ./government -type f -delete
 nimaikasibatla@Nimais-MacBook-Air technical %
 ```
-The find -delete command is used to remove every file in the given path government. Can be used to delete all the files within a given directory.
+The ```find -delete``` command is used to remove every file in the given path government. Can be used to delete all the files within a given directory.
 
 
