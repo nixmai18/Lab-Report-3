@@ -90,14 +90,14 @@ static void reverseInPlace(int[] arr) {
 }
 ```
 Explanation:
-The fix addresses the issue because the value is updated without storing the previous value. Before the temp variable is added and the loop is loop only for half of the array, the ```arr[i] = arr[arr.length - i - 1];``` directly override the value that we need to save it and interchange it. By loop through only half of the array and switch the elements between each other with the value stored in the temp first address the problem that the method change the array value with the wrong way.
+The fix addresses the issue because the value is updated without storing the previous value. Before the temp variable is added and the loop is loop only for half of the array, the ```arr[i] = arr[arr.length - i - 1];``` directly override the value that we need to save it and interchange it. By looping through only half of the array and switching the elements between each other with the value stored in the temp first addresses the problem that the method changes the array value with the wrong way.
 
 
 ## Part 2: Researching Commands
 
 Command Interested ```find```
 
-## ```find -name```
+## ```find -name```, Source: https://www.ibm.com/docs/en/zos/2.1.0?topic=command-find
 
 1. First Example
 
@@ -125,7 +125,7 @@ if you are trying to find the path of the file where you only know the part of t
 2. Second Example
 
 ```
-nimaikasibatla@Nimais-MacBook-Air technical % Find ./government/Env_Prot_Agen -name "*final*"
+nimaikasibatla@Nimais-MacBook-Air technical % find ./government/Env_Prot_Agen -name "*final*"
 ./government/Env_Prot_Agen/final.txt
 ./government/Env_Prot_Agen/final-vp.xml
 ./government/Env_Prot_Agen/final-logical.xml
@@ -134,10 +134,10 @@ nimaikasibatla@Nimais-MacBook-Air technical % Find ./government/Env_Prot_Agen -n
 ./government/Env_Prot_Agen/final-s.xml
 ./government/Env_Prot_Agen/final.anc
 ```
-The ```find -name``` command is returning every path for files that contain the string "final" within the file name. Can be used when you know the path of a file
+The ```find -name``` command returns every path for files that contain the string "final" within the file name. Can be used when you know the path of a file
 but not the complete file name.
 
-## ```find -type```
+## ```find -type```, Source: https://www.ibm.com/docs/en/zos/2.3.0?topic=commands-using-find-command-in-command-substitution-constructs
 
 1. First Example
 
@@ -151,7 +151,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./government -type d
 ./government/Post_Rate_Comm
 ./government/Media
 ```
-The ```find -type``` command is returning the paths for all directories within the path. This is useful if you want the directories paths within a directory rather than the files itself.
+The ```find -type``` command is returning the paths for all directories within the path. This is useful if you want the directory paths within a directory rather than the files itself.
 
 2. Second Example
 
@@ -161,7 +161,7 @@ nimaikasibatla@Nimais-MacBook-Air technical % find ./plos  -type f -empty
 ```
 The ```find -type``` command using ```-empty``` Returns the path of any empty file within the directory. Can be used to delete files not being used or empty files.
 
-## ```find -size```
+## ```find -size```, Source: https://opensource.com/article/21/9/linux-find-command#:~:text=The%20find%20command%20requires%20the,and%20then%20the%20search%20string.
 
 1. First Example
 
